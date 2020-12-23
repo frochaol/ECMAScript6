@@ -67,9 +67,45 @@ console.log (globalVar);
 const a = 'B';
 a = 'A';
 
+// -- OBJETOS
+let name = 'Fernando';
+let age = 28;
+// -- ANTERIOR
+obj = { name: name, age:age};
+// -- ECS6
+obj2 = {name, age};
+console.log(obj2);
 
 
+// -- ARROW FUNCTIONS
+const names = [
+    {name: 'fernando', age: 28},
+    {name: 'Yessica', age: 26}
+]
+// -- Anterior
+let listOfNames = names.map( function(item) {
+    console.log(item.name);
+})
+// -- ECS6
+let listOfNames2 = names.map(item => console.log(item.name));
+const listOfNames3 = (name, age) => {
+    //-- Código
+};
+const listOfNames4 = name => {
+    // -- Código
+};
+const square = num => num * num;
 
+// -- PROMESAS 
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if (true) {
+            resolve('Se resuelve la promesa');
+        } else {
+            reject('Salió mal');
+        }
+    });
+}
 
 
 
