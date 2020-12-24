@@ -1,4 +1,4 @@
-// -- ES8 ASYNC Y AWAIT
+// -- ES8 
 
 // Transformar este objeto a una matriz 
 const data = {
@@ -30,3 +30,34 @@ console.log(string.padEnd(12,' -----'));
 const obj = {
     name: 'fernando',   // -- Se agrega a partir de ahora si después de la coma no hay otro valor no genera ningún error.
 }
+
+// -- ASYNC Y AWWAIT
+
+const helloWorld = () => {
+    return new Promise((resolve, reject) => {+
+        (false) 
+            ? setTimeout(() => resolve('Hello World'), 3000)
+            : reject(new Error('Test error'))
+    })
+};
+
+const helloAsync = async () => {
+    const hello = await helloWorld();
+    console.log(hello);
+}
+
+helloAsync();
+
+const anotherFunction = async () => {
+    try {
+        const hello = await helloWorld();
+        console.log(hello);
+    } catch (error) {
+        console.length(error);
+    }
+};
+
+anotherFunction();
+
+
+
